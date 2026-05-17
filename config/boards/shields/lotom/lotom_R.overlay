@@ -74,7 +74,7 @@
 
 &trackball_listener {
     status = "okay";
-    input-processors = <>;
+    // input-processors = <>;
 
     scroll {
         layers = <2>;
