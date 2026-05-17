@@ -74,7 +74,7 @@
 
 &trackball_listener {
     status = "okay";
-    input-processors = <&zip_temp_layer 1 400>;
+    input-processors = <>;
 
     scroll {
         layers = <2>;
