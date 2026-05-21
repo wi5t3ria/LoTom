@@ -5,27 +5,18 @@
 
 #define ZMK_POINTING_DEFAULT_SCRL_VAL 80
 
+&lt {
+    quick-tap-ms = <150>;
+    flavor = "balanced";
+};
+
+&mt {
+    require-prior-idle-ms = <150>;
+    flavor = "balanced";
+    retro-tap;
+};
+
 / {
-    behaviors {
-        scroll_up_down: behavior_sensor_rotate_mouse_wheel_up_down {
-            compatible = "zmk,behavior-sensor-rotate";
-            label = "ENCODER_MSC_DOWN_UP";
-            #sensor-binding-cells = <0>;
-            bindings = <&msc SCRL_DOWN>, <&msc SCRL_UP>;
-
-            tap-ms = <20>;
-        };
-
-        tab_slide: behavior_sensor_rotate_tab_slide {
-            compatible = "zmk,behavior-sensor-rotate";
-            label = "ENCODER_TAB_SLIDE";
-            #sensor-binding-cells = <0>;
-            bindings = <&kp LA(LG(RIGHT_ARROW))>, <&kp LA(LG(LEFT_ARROW))>;
-
-            tap-ms = <20>;
-        };
-    };
-
     combos {
         compatible = "zmk,combos";
 
@@ -67,10 +58,7 @@
 &kp LCTRL         &kp LEFT_ALT   &kp LEFT_COMMAND  &mkp MB1  &lt 4 SPACE  &lt 2 ESCAPE      &kp ENTER          &mt LEFT_GUI BACKSPACE  &lt 6 ESCAPE  &kp LEFT_ALT
             >;
 
-            sensor-bindings = <
-                &inc_dec_kp RIGHT_ARROW LEFT_ARROW
-                &scroll_up_down
-            >;
+            sensor-bindings = <&inc_dec_kp RIGHT_ARROW LEFT_ARROW>, <&none>;
         };
 
         MOUSE {
@@ -82,10 +70,7 @@
 &kp LCTRL  &kp LEFT_ALT  &kp LEFT_COMMAND  &kp LEFT_SHIFT  &trans  &trans  &trans  &mo 3   &trans    &trans
             >;
 
-            sensor-bindings = <
-                &inc_dec_kp RIGHT_ARROW LEFT_ARROW
-                &scroll_up_down
-            >;
+            sensor-bindings = <&inc_dec_kp RIGHT_ARROW LEFT_ARROW>, <&none>;
         };
 
         SCROLL {
@@ -97,10 +82,7 @@
 &trans  &trans  &trans  &trans    &trans    &trans  &trans  &trans    &trans    &trans
             >;
 
-            sensor-bindings = <
-                &inc_dec_kp RIGHT_ARROW LEFT_ARROW
-                &scroll_up_down
-            >;
+            sensor-bindings = <&inc_dec_kp RIGHT_ARROW LEFT_ARROW>, <&none>;
         };
 
         ARROW {
@@ -112,10 +94,7 @@
 &trans     &trans                  &trans         &trans                   &trans             &trans  &trans  &trans  &trans              &trans
             >;
 
-            sensor-bindings = <
-                &inc_dec_kp RIGHT_ARROW LEFT_ARROW
-                &scroll_up_down
-            >;
+            sensor-bindings = <&inc_dec_kp RIGHT_ARROW LEFT_ARROW>, <&none>;
         };
 
         NUM {
@@ -127,10 +106,7 @@
 &trans          &trans        &trans        &trans        &trans     &trans  &kp GRAVE  &trans          &trans          &trans
             >;
 
-            sensor-bindings = <
-                &inc_dec_kp RIGHT_ARROW LEFT_ARROW
-                &scroll_up_down
-            >;
+            sensor-bindings = <&inc_dec_kp RIGHT_ARROW LEFT_ARROW>, <&none>;
         };
 
         FUNCTION {
@@ -142,10 +118,7 @@
 &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans          &trans          &trans
             >;
 
-            sensor-bindings = <
-                &inc_dec_kp RIGHT_ARROW LEFT_ARROW
-                &scroll_up_down
-            >;
+            sensor-bindings = <&inc_dec_kp RIGHT_ARROW LEFT_ARROW>, <&none>;
         };
 
         BT {
@@ -157,10 +130,7 @@
 &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans          &trans          &trans
             >;
 
-            sensor-bindings = <
-                &inc_dec_kp RIGHT_ARROW LEFT_ARROW
-                &scroll_up_down
-            >;
+            sensor-bindings = <&inc_dec_kp RIGHT_ARROW LEFT_ARROW>, <&none>;
         };
     };
 };
