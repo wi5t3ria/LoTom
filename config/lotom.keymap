@@ -26,6 +26,35 @@
         };
     };
 
+    combos {
+        compatible = "zmk,combos";
+
+        tab {
+            bindings = <&kp TAB>;
+            key-positions = <2 3>;
+        };
+
+        tab2 {
+            bindings = <&kp TAB>;
+            key-positions = <14 15>;
+        };
+
+        backspace {
+            bindings = <&kp BACKSPACE>;
+            key-positions = <25 24>;
+        };
+
+        ctrl {
+            bindings = <&kp RCTRL>;
+            key-positions = <37 36>;
+        };
+
+        ctrl+tab {
+            bindings = <&kp LC(TAB)>;
+            key-positions = <16 15>;
+        };
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
